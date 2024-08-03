@@ -165,12 +165,12 @@ For the above script, some important bits to note are:
 ## EC2 Host for the Application 
 
 An EC2 instance with Ubuntu 22.04 as the OS was created to host the Docker container. A security group was attached to the EC2 instance to allow HTTP traffic on port 80 & 8080 respectively. Port 22 was also opened to enable SSH connection.
-![security](images/security.png)
+![security](./images/security.png)
 
 Docker client was also installed on the EC2 instance (docker-ce, docker-ce-cli, and containerd.io ).
 
 ## ECR Repository
-An ECR repository was created in __us-east-1__ region.
+An ECR repository was created in __us-east-1__ region ![ecr](./images/ecr.png).
 A role granting the EC2 instance access to the ECR repository was also created and attached to the EC2 instance.
 
 ## Github Actions Workflow - CI
@@ -350,7 +350,7 @@ The CD (continuous deployment) part of the workflow pulls the application image 
 ```
 
 The CI/CD workflow ran successfully and deployed the containerized Docker application to the EC2 instance
-![final](images/cicdworkflow.png)
+![final](./images/cicdworkflow.png)
 
 To test the application, a the Linux tool, __curl__ was used to execute a POST method to the public IP of the EC2 instance:
 
@@ -359,4 +359,4 @@ curl -X POST http://3.87.160.57/
 ```
 
 The counter service file is updated after the above command and the count is reflected on accessing the IP address of the EC2 instance:
-![EC2](images/ec2counter.png)
+![EC2](./images/ec2counter.png)
