@@ -1,0 +1,12 @@
+version: '2.4'
+services:
+  counter-service:
+    container_name: counter-service
+    image: 975049925614.dkr.ecr.us-east-1.amazonaws.com/counter-servicerepo:latest
+    volumes:
+      - ./data:/data
+    ports:
+      - "80:8080"
+    restart: always
+    mem_limit: 256M
+    cpus: 0.5
