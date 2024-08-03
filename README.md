@@ -5,6 +5,7 @@ The aim of this project was to create a counter for every POST request the site 
 ## Python Logic
 
 The site's counter was written using Python. The Python code is below:
+```Python
 #!/usr/bin/env python3
 from flask import Flask, request, jsonify
 import os
@@ -13,7 +14,6 @@ app = Flask(__name__)
 
 # Define the path for the counter file to store the data in Docker Volume
 
-```Python
 COUNTER_FILE = "/data/counter.txt"
 
 def read_counter():
@@ -170,7 +170,7 @@ An EC2 instance with Ubuntu 22.04 as the OS was created to host the Docker conta
 Docker client was also installed on the EC2 instance (docker-ce, docker-ce-cli, and containerd.io ).
 
 ## ECR Repository
-An ECR repository was created in __us-east-1__ region ![ecr](./images/ecr.png).
+An ECR repository was created in __us-east-1__ region. ![ecr](./images/ecr.png)
 A role granting the EC2 instance access to the ECR repository was also created and attached to the EC2 instance.
 
 ## Github Actions Workflow - CI
