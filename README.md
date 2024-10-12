@@ -1,6 +1,6 @@
 # Site Counter Service Using Github Actions, Python, & Docker
 
-The aim of this project was to create a counter for every POST request the site has served and display it. The site's counter will be written in Python and served via a Docker container running on an EC2 instance. Github Actions will be used as the choice CI/CD tool to deploy the application.
+The aim of this project was to create a counter for every POST request the site has served and display the overall number of POST requests. The site's counter will be written in Python and served via a Docker container running on an EC2 instance. Github Actions will be used as the choice CI/CD tool to deploy the application.
 
 ## Python Logic
 
